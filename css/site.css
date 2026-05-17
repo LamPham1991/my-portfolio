@@ -1,0 +1,39 @@
+/* Small additions for GitHub Pages (Notion export is the source of truth for typography) */
+
+a[target="_blank"]::after {
+  content: none;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  color: rgba(55, 53, 47, 0.65);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: rgb(55, 53, 47);
+  text-decoration: underline;
+}
+
+.page .page-body a[href^="../"] {
+  text-decoration: none;
+}
+
+.page .page-body a[href^="../"]:hover {
+  text-decoration: underline;
+}
+
+.missing-media {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  background: rgba(42, 28, 0, 0.06);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.missing-media strong {
+  font-weight: 600;
+}

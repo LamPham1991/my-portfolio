@@ -1,4 +1,4 @@
-/* Small additions for GitHub Pages (Notion export is the source of truth for typography) */
+/* GitHub Pages additions — gallery, media, project pages */
 
 a[target="_blank"]::after {
   content: none;
@@ -17,12 +17,127 @@ a[target="_blank"]::after {
   text-decoration: underline;
 }
 
-.page .page-body a[href^="../"] {
+/* Notion-style project gallery (cover + title + tags) */
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 0.75rem 0 2rem;
+}
+
+@media (max-width: 720px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(55, 53, 47, 0.09);
+  background: #fff;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 2px 12px rgba(15, 15, 15, 0.08);
+  transform: translateY(-1px);
   text-decoration: none;
 }
 
-.page .page-body a[href^="../"]:hover {
-  text-decoration: underline;
+.project-card-cover {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  background: rgba(55, 53, 47, 0.06);
+}
+
+.project-card-body {
+  padding: 0.75rem 1rem 1rem;
+}
+
+.project-card-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  line-height: 1.35;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.project-card-title .icon {
+  flex-shrink: 0;
+}
+
+.project-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.project-gallery-simple .project-card-cover {
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+
+.collection-title {
+  margin-top: 0;
+}
+
+/* Embedded media on project pages */
+.media-block {
+  margin: 1.5rem 0;
+}
+
+.media-block h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.media-block video {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 4px;
+  background: #000;
+}
+
+.media-block iframe,
+.media-block embed {
+  width: 100%;
+  max-width: 100%;
+  min-height: 480px;
+  border: none;
+  border-radius: 4px;
+}
+
+.pdf-embed {
+  width: 100%;
+  height: 70vh;
+  min-height: 480px;
+  border: 1px solid rgba(55, 53, 47, 0.12);
+  border-radius: 4px;
+}
+
+.page-cover-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  max-height: 30vh;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.page-header-icon-with-cover img.icon {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
 }
 
 .missing-media {

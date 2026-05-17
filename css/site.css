@@ -82,7 +82,7 @@ a[target="_blank"]::after {
 }
 
 .project-gallery-simple .project-card-cover {
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
 }
 

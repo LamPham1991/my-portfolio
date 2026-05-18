@@ -67,8 +67,15 @@ body.portfolio-home .collection-content {
   margin: 0.5rem 0 0;
 }
 
-body.portfolio-home .collection-title {
-  margin: 0 0 0.5rem;
+/* Featured Work / Interesting Things — match Get in touch (h2 + highlight-teal) */
+body.portfolio-home .collection-content .collection-title {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: rgba(80, 148, 110, 1);
+  margin: 0.75rem 0 0.35rem;
 }
 
 body.portfolio-home .project-gallery {

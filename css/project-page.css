@@ -15,7 +15,8 @@ body.project-page .back-link {
   margin-bottom: 0.75rem;
 }
 
-body.project-page .project-header {
+body.project-page .project-header,
+body.project-page header {
   margin: 0 0 0.75rem;
   padding: 0;
 }
@@ -27,7 +28,14 @@ body.project-page .page-title {
   line-height: 1.2;
 }
 
-body.project-page .project-cover {
+body.project-page .page-description:empty {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+body.project-page .project-cover,
+body.project-page .page-cover-image {
   display: block;
   width: 100%;
   max-height: 200px;
@@ -35,6 +43,18 @@ body.project-page .project-cover {
   object-position: center center;
   border-radius: 4px;
   margin: 0 0 0.5rem;
+}
+
+body.project-page .page-header-icon-with-cover {
+  margin: 0 0 0.35rem;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+body.project-page .page-header-icon-with-cover img.icon {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
 }
 
 body.project-page .page-body {
@@ -54,9 +74,65 @@ body.project-page .page-body > * + * {
 
 body.project-page p,
 body.project-page h1,
+body.project-page h2,
+body.project-page h3,
 body.project-page h4 {
   margin: 0;
   white-space: normal;
+}
+
+body.project-page .page-body p:not(:empty) {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+body.project-page .page-body p:empty {
+  display: none;
+  height: 0;
+}
+
+body.project-page .page-body h2 {
+  margin: 0.75rem 0 0.35rem;
+  font-size: 1.35rem;
+  text-align: left;
+}
+
+body.project-page .page-body h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.125rem;
+  text-align: left;
+}
+
+body.project-page .page-body h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+body.project-page hr {
+  margin: 0.75rem 0;
+  border: none;
+  border-top: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+body.project-page ul,
+body.project-page ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  white-space: normal;
+}
+
+body.project-page li {
+  margin: 0.2rem 0;
+  padding: 0;
+  line-height: 1.45;
+  text-align: left;
 }
 
 body.project-page .project-tags {
@@ -80,10 +156,6 @@ body.project-page .project-tags .selected-value {
 body.project-page .project-intro {
   line-height: 1.5;
   font-size: 1rem;
-  text-align: justify;
-  text-justify: inter-word;
-  -webkit-hyphens: auto;
-  hyphens: auto;
 }
 
 body.project-page .media-block {
@@ -102,4 +174,106 @@ body.project-page .media-block video {
   border-radius: 4px;
   background: #111;
   vertical-align: top;
+}
+
+body.project-page .media-block p {
+  margin-top: 0.35rem;
+  text-align: left;
+}
+
+body.project-page .pdf-embed {
+  min-height: 360px;
+  height: 55vh;
+  margin: 0;
+}
+
+/* Notion export (Drova) */
+body.project-page .table_of_contents {
+  margin: 0.25rem 0 0.5rem;
+}
+
+body.project-page .table_of_contents-item {
+  margin: 0.12rem 0;
+  padding: 0;
+}
+
+body.project-page .link-to-page {
+  margin: 0.35rem 0;
+  padding: 0;
+}
+
+body.project-page .link-to-page a {
+  text-decoration: none;
+}
+
+body.project-page .bulleted-list {
+  margin: 0.35rem 0;
+  padding-left: 1.25rem;
+}
+
+/* Passion page aliases (shared compact layout) */
+body.project-page .passion-header {
+  margin: 0 0 0.75rem;
+  padding: 0;
+}
+
+body.project-page .passion-cover {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  object-position: 50% 0%;
+  border-radius: 4px;
+  margin: 0 0 0.5rem;
+}
+
+body.project-page .passion-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+body.project-page .passion-tags .selected-value {
+  display: inline-block;
+  margin: 0;
+  padding: 0.1em 0.45em;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+}
+
+body.project-page .passion-intro {
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+body.project-page .video-wrap {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #111;
+  aspect-ratio: 16 / 9;
+  line-height: 0;
+}
+
+body.project-page .video-wrap video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body.project-page .video-fallback {
+  display: none;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+body.project-page .video-wrap.is-error + .video-fallback {
+  display: block;
+  margin-top: 0.5rem;
 }

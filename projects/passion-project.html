@@ -18,39 +18,16 @@
     </header>
 
     <div class="page-body">
-      <p class="passion-tags">
-        <span class="selected-value select-value-color-pink">Art</span>
-        <span class="selected-value select-value-color-pink">Ballet</span>
-        <span class="selected-value select-value-color-orange">Guitar</span>
-        <span class="selected-value select-value-color-yellow">Music</span>
-        <span class="selected-value select-value-color-blue">Piano</span>
-        <span class="selected-value select-value-color-green">Singing</span>
-        <span class="selected-value select-value-color-gray">Violin</span>
-        <span class="selected-value select-value-color-green">Yoga</span>
-      </p>
+      <div class="passion-tags"><span class="selected-value select-value-color-pink">Art</span><span class="selected-value select-value-color-pink">Ballet</span><span class="selected-value select-value-color-orange">Guitar</span><span class="selected-value select-value-color-yellow">Music</span><span class="selected-value select-value-color-blue">Piano</span><span class="selected-value select-value-color-green">Singing</span><span class="selected-value select-value-color-gray">Violin</span><span class="selected-value select-value-color-green">Yoga</span></div>
 
-      <p class="passion-intro">
-        Outside of work I'm passionate about the arts — musician and singer, with occasional performances.
-        See more on <a href="https://www.instagram.com/lalalampham" target="_blank" rel="noopener noreferrer">Instagram</a>.
-      </p>
+      <p class="passion-intro">Outside of work I'm passionate about the arts — musician and singer, with occasional performances. See more on <a href="https://www.instagram.com/lalalampham" target="_blank" rel="noopener noreferrer">Instagram</a>.</p>
 
       <section class="media-block">
         <h4>The box of joy</h4>
         <div class="video-wrap" id="passion-video-wrap">
-          <video
-            id="passion-video"
-            controls
-            playsinline
-            preload="metadata"
-            src="../assets/media/passion/box-of-joy.mp4"
-          >
-            Your browser does not support embedded video.
-          </video>
+          <video id="passion-video" controls playsinline preload="metadata" src="../assets/media/passion/box-of-joy.mp4">Your browser does not support embedded video.</video>
         </div>
-        <p class="video-fallback" id="passion-video-fallback">
-          Video could not be loaded.
-          <a href="../assets/media/passion/box-of-joy.mp4" target="_blank" rel="noopener noreferrer">Open video file</a>
-        </p>
+        <p class="video-fallback" id="passion-video-fallback">Video could not be loaded. <a href="../assets/media/passion/box-of-joy.mp4" target="_blank" rel="noopener noreferrer">Open video file</a></p>
       </section>
     </div>
   </article>
@@ -59,10 +36,7 @@
       var video = document.getElementById("passion-video");
       var wrap = document.getElementById("passion-video-wrap");
       if (!video || !wrap) return;
-      function showError() {
-        wrap.classList.add("is-error");
-      }
-      video.addEventListener("error", showError);
+      video.addEventListener("error", function () { wrap.classList.add("is-error"); });
     })();
   </script>
 </body>

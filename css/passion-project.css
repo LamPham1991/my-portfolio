@@ -1,54 +1,85 @@
-/* Passion Project page only — tighter layout, no Notion header gaps */
+/* Passion Project page — compact layout, overrides Notion spacing */
 
 body.passion-project-page {
   white-space: normal;
+  margin: 1.25rem auto !important;
+  padding: 0 1.25rem 2rem;
 }
 
 body.passion-project-page .page {
   max-width: 900px;
+  margin: 0;
 }
 
-body.passion-project-page .page-body {
-  white-space: normal;
-}
-
-body.passion-project-page .page-body > * {
-  margin-top: 0;
-}
-
-body.passion-project-page .page-body > * + * {
-  margin-top: 1rem;
-}
-
-body.passion-project-page .page-title {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
+body.passion-project-page .back-link {
+  margin-bottom: 0.75rem;
 }
 
 body.passion-project-page .passion-header {
-  margin-bottom: 1.25rem;
+  margin: 0 0 0.75rem;
+  padding: 0;
+}
+
+body.passion-project-page .page-title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.75rem;
+  line-height: 1.2;
 }
 
 body.passion-project-page .passion-cover {
   display: block;
   width: 100%;
-  max-height: 220px;
+  max-height: 200px;
   object-fit: cover;
   object-position: 50% 0%;
   border-radius: 4px;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.5rem;
+}
+
+body.passion-project-page .page-body {
+  white-space: normal;
+  margin: 0;
+  padding: 0;
+}
+
+body.passion-project-page .page-body > * {
+  margin: 0;
+  padding: 0;
+}
+
+body.passion-project-page .page-body > * + * {
+  margin-top: 0.75rem;
+}
+
+body.passion-project-page p,
+body.passion-project-page h1,
+body.passion-project-page h4 {
+  margin: 0;
+  white-space: normal;
 }
 
 body.passion-project-page .passion-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.35rem;
+  align-items: center;
+  gap: 0.3rem;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+body.passion-project-page .passion-tags .selected-value {
+  display: inline-block;
   margin: 0;
+  padding: 0.1em 0.45em;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  vertical-align: baseline;
 }
 
 body.passion-project-page .passion-intro {
-  margin: 0;
   line-height: 1.5;
+  font-size: 1rem;
 }
 
 body.passion-project-page .media-block {
@@ -56,38 +87,39 @@ body.passion-project-page .media-block {
 }
 
 body.passion-project-page .media-block h4 {
-  margin: 0 0 0.5rem;
   font-size: 1rem;
   font-weight: 600;
+  margin: 0 0 0.35rem;
 }
 
 body.passion-project-page .video-wrap {
-  position: relative;
   width: 100%;
-  max-width: 100%;
   border-radius: 4px;
   overflow: hidden;
   background: #111;
   aspect-ratio: 16 / 9;
+  line-height: 0;
 }
 
 body.passion-project-page .video-wrap video {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   vertical-align: top;
 }
 
 body.passion-project-page .video-fallback {
   display: none;
   margin: 0;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
+  line-height: 1.4;
   border-radius: 4px;
   background: rgba(42, 28, 0, 0.06);
 }
 
 body.passion-project-page .video-wrap.is-error + .video-fallback {
   display: block;
+  margin-top: 0.5rem;
 }

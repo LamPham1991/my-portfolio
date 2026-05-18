@@ -1,0 +1,93 @@
+/* Drova — inline detail sections (replaces Notion links) */
+
+body.project-page .drova-details {
+  margin: 0.5rem 0;
+  border: 1px solid rgba(80, 148, 110, 0.35);
+  border-radius: 4px;
+  background: rgba(0, 100, 45, 0.04);
+}
+
+body.project-page .drova-details > summary {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  color: rgba(80, 148, 110, 1);
+  list-style: none;
+}
+
+body.project-page .drova-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+body.project-page .drova-details > summary::before {
+  content: "▸ ";
+}
+
+body.project-page .drova-details[open] > summary::before {
+  content: "▾ ";
+}
+
+body.project-page .drova-details-body {
+  padding: 0.5rem 0.75rem 0.75rem;
+  border-top: 1px solid rgba(55, 53, 47, 0.08);
+  white-space: normal;
+}
+
+body.project-page .notion-detail-content {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+body.project-page .notion-detail-content .notion-block {
+  margin: 0.35rem 0;
+}
+
+body.project-page .notion-detail-content .notion-enable-hover {
+  font-weight: inherit;
+}
+
+body.project-page .notion-detail-content .content-editable-leaf-rtl {
+  display: inline;
+}
+
+body.project-page .notion-detail-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+
+body.project-page .notion-detail-content table {
+  width: 100%;
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+}
+
+body.project-page .notion-detail-content h2,
+body.project-page .notion-detail-content h3,
+body.project-page .notion-detail-content h4 {
+  margin: 0.65rem 0 0.3rem;
+  text-align: left;
+}
+
+body.project-page .notion-detail-content p {
+  margin: 0.35rem 0;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+body.project-page .notion-detail-content ul,
+body.project-page .notion-detail-content ol {
+  margin: 0.35rem 0;
+  padding-left: 1.25rem;
+}
+
+body.project-page .link-to-page {
+  display: none;
+}
+
+body.project-page .drova-details-missing {
+  margin: 0.35rem 0;
+  font-size: 0.875rem;
+  color: rgba(125, 122, 117, 1);
+}

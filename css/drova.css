@@ -29,25 +29,97 @@ body.project-page .drova-details[open] > summary::before {
 
 body.project-page .drova-details-body {
   padding: 0.5rem 0.75rem 0.75rem;
-  border-top: 1px solid rgba(55, 53, 47, 0.08);
+  border-top: 1px solid rgba(55, 53, 47, 0.09);
   white-space: normal;
+  overflow-x: auto;
 }
 
 body.project-page .notion-detail-content {
   font-size: 0.9375rem;
   line-height: 1.5;
+  color: rgb(55, 53, 47);
 }
 
-body.project-page .notion-detail-content .notion-block {
+/* Tables — Notion simple-table style */
+body.project-page .notion-detail-content .simple-table {
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  margin: 0.75rem 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
+  border-collapse: collapse;
+  table-layout: fixed;
+  empty-cells: show;
+}
+
+body.project-page .notion-detail-content .simple-table th,
+body.project-page .notion-detail-content .simple-table td {
+  display: table-cell;
+  border: 1px solid rgba(55, 53, 47, 0.12);
+  padding: 0.5rem 0.65rem;
+  vertical-align: top;
+  text-align: left;
+  white-space: normal;
+  word-break: break-word;
+  hyphens: auto;
+  min-width: 4rem;
+}
+
+body.project-page .notion-detail-content .simple-table th {
+  background: rgb(247, 246, 243);
+  font-weight: 600;
+  color: rgb(55, 53, 47);
+}
+
+body.project-page .notion-detail-content .simple-table tr {
+  display: table-row;
+}
+
+/* Legacy scraped tables (if any remain) */
+body.project-page .notion-detail-content table:not(.simple-table) {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 0.875rem;
+  margin: 0.75rem 0;
+}
+
+body.project-page .notion-detail-content table:not(.simple-table) td,
+body.project-page .notion-detail-content table:not(.simple-table) th {
+  border: 1px solid rgba(55, 53, 47, 0.12);
+  padding: 0.5rem 0.65rem;
+  vertical-align: top;
+  white-space: normal;
+  word-break: break-word;
+}
+
+body.project-page .notion-detail-content h4 {
+  margin: 0.75rem 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  color: rgb(55, 53, 47);
+}
+
+body.project-page .notion-detail-content p {
   margin: 0.35rem 0;
+  text-align: left;
+  line-height: 1.5;
 }
 
-body.project-page .notion-detail-content .notion-enable-hover {
-  font-weight: inherit;
+body.project-page .notion-detail-content ul,
+body.project-page .notion-detail-content ol {
+  margin: 0.35rem 0 0.5rem;
+  padding-left: 1.35rem;
 }
 
-body.project-page .notion-detail-content .content-editable-leaf-rtl {
-  display: inline;
+body.project-page .notion-detail-content li {
+  margin: 0.25rem 0;
+  padding-left: 0.15rem;
+  text-align: left;
+  line-height: 1.45;
 }
 
 body.project-page .notion-detail-content img {
@@ -57,29 +129,9 @@ body.project-page .notion-detail-content img {
   margin: 0.5rem 0;
 }
 
-body.project-page .notion-detail-content table {
-  width: 100%;
-  font-size: 0.875rem;
-  margin: 0.5rem 0;
-}
-
-body.project-page .notion-detail-content h2,
-body.project-page .notion-detail-content h3,
-body.project-page .notion-detail-content h4 {
-  margin: 0.65rem 0 0.3rem;
-  text-align: left;
-}
-
-body.project-page .notion-detail-content p {
-  margin: 0.35rem 0;
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-body.project-page .notion-detail-content ul,
-body.project-page .notion-detail-content ol {
-  margin: 0.35rem 0;
-  padding-left: 1.25rem;
+body.project-page .notion-detail-content a {
+  color: inherit;
+  text-decoration: underline;
 }
 
 body.project-page .link-to-page {
@@ -90,4 +142,13 @@ body.project-page .drova-details-missing {
   margin: 0.35rem 0;
   font-size: 0.875rem;
   color: rgba(125, 122, 117, 1);
+}
+
+/* Hide broken Notion scrape wrappers if any slip through */
+body.project-page .notion-detail-content .notion-scroller,
+body.project-page .notion-detail-content .x78zum5,
+body.project-page .notion-detail-content .notion-table-cell {
+  display: block;
+  width: auto;
+  overflow: visible;
 }

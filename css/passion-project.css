@@ -1,0 +1,93 @@
+/* Passion Project page only — tighter layout, no Notion header gaps */
+
+body.passion-project-page {
+  white-space: normal;
+}
+
+body.passion-project-page .page {
+  max-width: 900px;
+}
+
+body.passion-project-page .page-body {
+  white-space: normal;
+}
+
+body.passion-project-page .page-body > * {
+  margin-top: 0;
+}
+
+body.passion-project-page .page-body > * + * {
+  margin-top: 1rem;
+}
+
+body.passion-project-page .page-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+body.passion-project-page .passion-header {
+  margin-bottom: 1.25rem;
+}
+
+body.passion-project-page .passion-cover {
+  display: block;
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 4px;
+  margin: 0 0 0.75rem;
+}
+
+body.passion-project-page .passion-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+}
+
+body.passion-project-page .passion-intro {
+  margin: 0;
+  line-height: 1.5;
+}
+
+body.passion-project-page .media-block {
+  margin: 0;
+}
+
+body.passion-project-page .media-block h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+body.passion-project-page .video-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #111;
+  aspect-ratio: 16 / 9;
+}
+
+body.passion-project-page .video-wrap video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  vertical-align: top;
+}
+
+body.passion-project-page .video-fallback {
+  display: none;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  background: rgba(42, 28, 0, 0.06);
+}
+
+body.passion-project-page .video-wrap.is-error + .video-fallback {
+  display: block;
+}

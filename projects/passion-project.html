@@ -6,17 +6,19 @@
   <title>Passion Project — Lam Pham</title>
   <link rel="stylesheet" href="../css/notion.css" />
   <link rel="stylesheet" href="../css/site.css" />
+  <link rel="stylesheet" href="../css/passion-project.css" />
 </head>
-<body>
+<body class="passion-project-page">
   <article class="page sans">
     <a class="back-link" href="../index.html">← Back to Portfolio</a>
-    <header>
-      <img class="page-cover-image" src="../assets/thumbnails/passion-project.png" alt="" />
-      <div class="page-header-icon page-header-icon-with-cover"><span class="icon">🎧</span></div>
+
+    <header class="passion-header">
+      <img class="passion-cover" src="../assets/thumbnails/passion-project.png" alt="Lam Pham performing" />
       <h1 class="page-title">Passion Project</h1>
     </header>
+
     <div class="page-body">
-      <p style="margin-top:0">
+      <p class="passion-tags">
         <span class="selected-value select-value-color-pink">Art</span>
         <span class="selected-value select-value-color-pink">Ballet</span>
         <span class="selected-value select-value-color-orange">Guitar</span>
@@ -26,13 +28,42 @@
         <span class="selected-value select-value-color-gray">Violin</span>
         <span class="selected-value select-value-color-green">Yoga</span>
       </p>
-      <p>Outside of work I'm passionate about the arts — musician and singer, with occasional performances. See more on <a href="https://www.instagram.com/lalalampham" target="_blank" rel="noopener noreferrer">Instagram</a>.</p>
-      <div class="media-block">
+
+      <p class="passion-intro">
+        Outside of work I'm passionate about the arts — musician and singer, with occasional performances.
+        See more on <a href="https://www.instagram.com/lalalampham" target="_blank" rel="noopener noreferrer">Instagram</a>.
+      </p>
+
+      <section class="media-block">
         <h4>The box of joy</h4>
-        <video controls preload="metadata" playsinline src="../assets/media/passion/box-of-joy.mp4"></video>
-        <p class="missing-media" style="margin-top:0.75rem"><strong>Note:</strong> This video is 125MB. If it does not load on GitHub Pages, enable <a href="https://git-lfs.github.com/" target="_blank" rel="noopener noreferrer">Git LFS</a> in the repository or share a YouTube/Vimeo link.</p>
-      </div>
+        <div class="video-wrap" id="passion-video-wrap">
+          <video
+            id="passion-video"
+            controls
+            playsinline
+            preload="metadata"
+            src="../assets/media/passion/box-of-joy.mp4"
+          >
+            Your browser does not support embedded video.
+          </video>
+        </div>
+        <p class="video-fallback" id="passion-video-fallback">
+          Video could not be loaded.
+          <a href="../assets/media/passion/box-of-joy.mp4" target="_blank" rel="noopener noreferrer">Open video file</a>
+        </p>
+      </section>
     </div>
   </article>
+  <script>
+    (function () {
+      var video = document.getElementById("passion-video");
+      var wrap = document.getElementById("passion-video-wrap");
+      if (!video || !wrap) return;
+      function showError() {
+        wrap.classList.add("is-error");
+      }
+      video.addEventListener("error", showError);
+    })();
+  </script>
 </body>
 </html>

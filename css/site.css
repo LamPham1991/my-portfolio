@@ -59,7 +59,7 @@ a[target="_blank"]::after {
 }
 
 .project-card-cover.passion-thumbnail-top {
-  object-position: 50% 0%;
+  object-position: top center;
 }
 
 .project-card-body {

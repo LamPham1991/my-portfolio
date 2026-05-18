@@ -1,0 +1,57 @@
+/* Pianify — Notion typography (heading 3, pin lines, body) */
+
+body.pianify-page .page-body > h3:first-of-type {
+  margin-top: 0;
+}
+
+/* Notion Heading 3 — match notion.css, not project-page h4 sizing */
+body.pianify-page .page-body h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: rgb(55, 53, 47);
+  margin: 1.25rem 0 0.35rem;
+  text-align: left;
+}
+
+body.pianify-page .page-body > p {
+  color: rgb(55, 53, 47);
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* 📌 callout lines — left-aligned, bold label like Notion */
+body.pianify-page .page-body .pin-line {
+  text-align: left;
+  margin-top: 0.75rem;
+}
+
+body.pianify-page .page-body .pin-line strong {
+  font-weight: 600;
+}
+
+body.pianify-page .page-body ul {
+  color: rgb(55, 53, 47);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+body.pianify-page .page-body li {
+  text-align: left;
+}
+
+body.pianify-page .page-body li strong {
+  font-weight: 600;
+}
+
+/* Video section headings sit directly above media */
+body.pianify-page .page-body h3 + .media-block {
+  margin-top: 0.35rem;
+}
+
+body.pianify-page .media-block h4 {
+  display: none;
+}

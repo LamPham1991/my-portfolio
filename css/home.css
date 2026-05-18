@@ -38,11 +38,22 @@ body.portfolio-home .page-body p {
   white-space: normal;
 }
 
-/* Meet Lam + What I Do bio paragraphs — align both edges */
-body.portfolio-home #2227bb89-0c64-81ec-9351-d3f7bff5a9c1 p {
+/* Body copy (black text) — full-width + justify both edges */
+body.portfolio-home .page-body p:not(:empty) {
+  display: block;
+  width: 100%;
+  max-width: 100%;
   text-align: justify;
   text-justify: inter-word;
+  -webkit-hyphens: auto;
   hyphens: auto;
+}
+
+/* Keep sidebar greeting & project card titles left-aligned */
+body.portfolio-home #2227bb89-0c64-8105-858d-eae0b951247c p,
+body.portfolio-home .project-card p {
+  text-align: left;
+  hyphens: manual;
 }
 
 body.portfolio-home .column-list {

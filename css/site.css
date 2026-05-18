@@ -53,8 +53,13 @@ a[target="_blank"]::after {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  object-position: center center;
   display: block;
   background: rgba(55, 53, 47, 0.06);
+}
+
+.project-card-cover.passion-thumbnail-top {
+  object-position: 50% 0%;
 }
 
 .project-card-body {

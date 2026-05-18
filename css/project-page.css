@@ -104,9 +104,14 @@ body.project-page .page-body h2 {
 }
 
 body.project-page .page-body h3 {
-  margin: 0.5rem 0 0.25rem;
-  font-size: 1.125rem;
+  margin: 0.75rem 0 0.35rem;
+  font-size: 1.25rem;
+  font-weight: 600;
   text-align: left;
+}
+
+body.project-page .page-body h3:first-child {
+  margin-top: 0;
 }
 
 body.project-page .page-body h4 {

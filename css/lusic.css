@@ -1,0 +1,71 @@
+/* Lusic — Notion typography (orange/green pin lines, heading 3) */
+
+body.lusic-page .page-body > h3:first-of-type {
+  margin-top: 0;
+}
+
+body.lusic-page .page-body h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: rgb(55, 53, 47);
+  margin: 1.25rem 0 0.35rem;
+  text-align: left;
+}
+
+body.lusic-page .page-body > p {
+  color: rgb(55, 53, 47);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+body.lusic-page .page-body > p em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* 📌 callouts — orange bold italic like Notion */
+body.lusic-page .pin-line {
+  text-align: left;
+  margin-top: 0.75rem;
+  font-size: 1rem;
+}
+
+body.lusic-page .pin-line.pin-orange strong em,
+body.lusic-page .pin-line.pin-orange em {
+  font-style: italic;
+  font-weight: 600;
+  color: rgba(210, 123, 45, 1);
+}
+
+body.lusic-page .pin-line.pin-green strong em,
+body.lusic-page .pin-line.pin-green em {
+  font-style: italic;
+  font-weight: 600;
+  color: rgba(80, 148, 110, 1);
+}
+
+body.lusic-page .page-body ul {
+  color: rgb(55, 53, 47);
+  font-size: 1rem;
+}
+
+body.lusic-page .page-body li {
+  text-align: left;
+}
+
+body.lusic-page .page-body li a strong {
+  font-weight: 600;
+  color: inherit;
+}
+
+body.lusic-page .page-body h3 + p {
+  text-align: left;
+  font-weight: 400;
+}
+
+body.lusic-page .page-body h3 + .media-block,
+body.lusic-page .page-body p + .media-block {
+  margin-top: 0.35rem;
+}

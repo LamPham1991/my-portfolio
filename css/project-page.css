@@ -1,0 +1,105 @@
+/* Project case study pages — compact spacing (homepage / passion pattern) */
+
+body.project-page {
+  white-space: normal;
+  margin: 1.25rem auto !important;
+  padding: 0 1.25rem 2rem;
+}
+
+body.project-page .page {
+  max-width: 900px;
+  margin: 0;
+}
+
+body.project-page .back-link {
+  margin-bottom: 0.75rem;
+}
+
+body.project-page .project-header {
+  margin: 0 0 0.75rem;
+  padding: 0;
+}
+
+body.project-page .page-title {
+  margin: 0;
+  padding: 0;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+body.project-page .project-cover {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 4px;
+  margin: 0 0 0.5rem;
+}
+
+body.project-page .page-body {
+  white-space: normal;
+  margin: 0;
+  padding: 0;
+}
+
+body.project-page .page-body > * {
+  margin: 0;
+  padding: 0;
+}
+
+body.project-page .page-body > * + * {
+  margin-top: 0.75rem;
+}
+
+body.project-page p,
+body.project-page h1,
+body.project-page h4 {
+  margin: 0;
+  white-space: normal;
+}
+
+body.project-page .project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+body.project-page .project-tags .selected-value {
+  display: inline-block;
+  margin: 0;
+  padding: 0.1em 0.45em;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  vertical-align: baseline;
+}
+
+body.project-page .project-intro {
+  line-height: 1.5;
+  font-size: 1rem;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+body.project-page .media-block {
+  margin: 0;
+}
+
+body.project-page .media-block h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+}
+
+body.project-page .media-block video {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  background: #111;
+  vertical-align: top;
+}

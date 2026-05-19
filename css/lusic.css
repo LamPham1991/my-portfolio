@@ -39,13 +39,6 @@ body.lusic-page .pin-line.pin-orange em {
   color: rgba(210, 123, 45, 1);
 }
 
-body.lusic-page .pin-line.pin-green strong em,
-body.lusic-page .pin-line.pin-green em {
-  font-style: italic;
-  font-weight: 600;
-  color: rgba(80, 148, 110, 1);
-}
-
 body.lusic-page .page-body ul {
   color: rgb(55, 53, 47);
   font-size: 1rem;

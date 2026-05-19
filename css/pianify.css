@@ -30,7 +30,9 @@ body.pianify-page .page-body .pin-line {
 }
 
 body.pianify-page .page-body .pin-line strong {
+  font-style: italic;
   font-weight: 600;
+  color: rgba(210, 123, 45, 1);
 }
 
 body.pianify-page .page-body ul {

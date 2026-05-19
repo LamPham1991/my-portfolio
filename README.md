@@ -1,6 +1,6 @@
 # Portfolio — Lam Pham
 
-Product manager portfolio built from a Notion export, hosted on [GitHub Pages](https://pages.github.com/).
+Product manager portfolio, hosted on [GitHub Pages](https://pages.github.com/).
 
 **Live site:** https://lampham1991.github.io/my-portfolio/
 
